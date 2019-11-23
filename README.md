@@ -1,4 +1,4 @@
-# Informationstechnologie- Informatik
+# Informationstechnologie - Informatik
 
 ## Getting Started
 
