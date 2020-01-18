@@ -5,7 +5,10 @@
 ### Tools
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-  - TODO: Extension
+  - [Horizon Theme](https://marketplace.visualstudio.com/items?itemName=jolaleye.horizon-theme-vscode)
+  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  - TODO: PHP-Intellisense
+  - TODO: PHP-Formatter
   - TODO: Settings als Gist zur Verfügung stellen
 - [GitHub Desktop](https://desktop.github.com/)
 - [XAMPP](https://www.apachefriends.org/de/index.html)
@@ -21,6 +24,7 @@ $database = '####';
 $user     = 'root';
 $password = '';
 ```
+
 ## Helpful Links
 
 - [PHP](https://www.w3schools.com/php/default.asp)
