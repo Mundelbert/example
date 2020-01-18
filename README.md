@@ -5,10 +5,11 @@
 ### Tools
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-  - [Horizon Theme](https://marketplace.visualstudio.com/items?itemName=jolaleye.horizon-theme-vscode)
-  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-  - TODO: PHP-Intellisense
-  - TODO: PHP-Formatter
+  - Extensions
+    - [Horizon Theme](https://marketplace.visualstudio.com/items?itemName=jolaleye.horizon-theme-vscode)
+    - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+    - TODO: PHP-Intellisense
+    - TODO: PHP-Formatter
   - [Settings](https://github.com/Bluuax/lap/blob/master/configurations/vs-code-settings.json)
 - [GitHub Desktop](https://desktop.github.com/)
 - [XAMPP](https://www.apachefriends.org/de/index.html)
