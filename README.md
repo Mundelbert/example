@@ -9,7 +9,7 @@
   - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
   - TODO: PHP-Intellisense
   - TODO: PHP-Formatter
-  - TODO: Settings als Gist zur Verfügung stellen
+  - [VS Code Settings](https://github.com/Bluuax/lap/blob/master/Configurations/VS%20Code%20Settings.json)
 - [GitHub Desktop](https://desktop.github.com/)
 - [XAMPP](https://www.apachefriends.org/de/index.html)
 - [MySQL Workbench](https://www.mysql.com/products/workbench)
