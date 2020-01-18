@@ -11,6 +11,16 @@
 - [XAMPP](https://www.apachefriends.org/de/index.html)
 - [MySQL Workbench](https://www.mysql.com/products/workbench)
 
+## Coding
+
+Connect workbench
+
+```
+$server   = 'localhost';
+$database = '####';
+$user     = 'root';
+$password = '';
+```
 ## Helpful Links
 
 - [PHP](https://www.w3schools.com/php/default.asp)
