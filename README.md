@@ -21,7 +21,7 @@ Connect workbench
 
 ```
 $server   = 'localhost';
-$database = '####';
+$database = '${name}';
 $user     = 'root';
 $password = '';
 ```
