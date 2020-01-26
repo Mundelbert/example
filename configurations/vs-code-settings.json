@@ -27,5 +27,6 @@
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "window.zoomLevel": 0,
-  "prettier.printWidth": 120
+  "prettier.printWidth": 120,
+  "php.validate.executablePath": "C:/xampp/php/php.exe"
 }
