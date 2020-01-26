@@ -15,6 +15,7 @@
 - [XAMPP](https://www.apachefriends.org/de/index.html)
 - [MySQL Workbench](https://www.mysql.com/products/workbench)
     - [Version 8.0.18](https://downloads.mysql.com/archives/workbench/) -- Windows (x86, 64-bit), MSI Installer
+    - Forward Engineering konfigurieren: Model -> Model Options -> Target MySQL: 5.7
 
 ## Coding
 
