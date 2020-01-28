@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Filmsuche</title>
+  </head>
+  <body>
+    <div class="custom-container">
+      <form action="filmsuche.php" method="GET">
+        <h3>Filmsuche</h3>
+        <label for="input">Suche Film nach Produktionsfirma:</label>
+        <input type="text" name="input" id="input" /><br />
+        <input type="submit" value="Suchen" />
+        <input type="reset" value="Abbrechen" />
+      </form>
+    </div>
+  </body>
+</html>
