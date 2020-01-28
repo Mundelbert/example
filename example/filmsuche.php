@@ -14,25 +14,25 @@
     <title>Filmsuche</title>
   </head>
   <body>
-    <?php
-      if (!empty($_GET["input"])) {
-        $connection = new PDO("mysql:host=localhost;dbname=filmauswahl", "root", "");
-        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    <div class="custom-container">
+      <h3>Suchergebnis</h3>
+      <?php
+        if (!empty($_GET["input"])) {
+          $connection = new PDO("mysql:host=localhost;dbname=filmauswahl", "root", "");
+          $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $param = "%" . $_GET["input"] . "%";
+          $param = "%" . $_GET["input"] . "%";
 
-        $statement = $connection->prepare(
-          "SELECT Name FROM produktionsfirma
-          WHERE Name LIKE :input;"
-        );
-        $statement->bindParam(':input', $param);
-        $statement->execute();
-        $result = $statement->fetchAll();
-        // echo "<script>console.log('" . json_encode($result) . "');</script>";
-        ?>
+          $statement = $connection->prepare(
+            "SELECT Name FROM produktionsfirma
+            WHERE Name LIKE :input;"
+          );
+          $statement->bindParam(':input', $param);
+          $statement->execute();
+          $result = $statement->fetchAll();
+          // echo "<script>console.log('" . json_encode($result) . "');</script>";
+          ?>
 
-        <div class="custom-container">
-          <h3>Suchergebnis</h3>
           <p>Gesuchte Produktionsfirma: <span><?php echo $_GET["input"] ?></span></p>
         
           <?php
@@ -83,12 +83,12 @@
                 </tbody>
               </table>
               <?php
+              }
             }
-          }
-        echo "</div>";
-      } else {
-        echo "Es wurde keine Produktionsfirma mitgegeben...";
-      }
-    ?>
+        } else {
+          echo "<p>Es wurde keine Produktionsfirma mitgegeben</p>";
+        }
+      ?>
+    </div>
   </body>
 </html>
