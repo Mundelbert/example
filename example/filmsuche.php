@@ -75,7 +75,7 @@
                     foreach ($result as $row) {
                       echo "<tr>";
                         echo "<td>" . $row["Titel"] . "</td>";
-                        echo "<td>" . $row["Erscheinungsdatum"] . "</td>";
+                        echo "<td>" . date("m.d.Y", strtotime($row["Erscheinungsdatum"])) . "</td>";
                         echo "<td>" . $row["Produktionsfirma"] . "</td>";
                       echo "</tr>";
                     }
