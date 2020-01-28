@@ -19,14 +19,20 @@
 
 ## Coding
 
-Connect workbench
+URL
+```
+http://localhost/lap/example/filmsuche.php
+```
 
+Connect workbench
 ```
 $server   = 'localhost';
 $database = '${name}';
 $user     = 'root';
 $password = '';
 ```
+
+
 
 ## Helpful Links
 
