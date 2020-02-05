@@ -16,7 +16,7 @@
 - [MySQL Workbench](https://www.mysql.com/products/workbench)
     - [Version 8.0.18](https://downloads.mysql.com/archives/workbench/) - Windows (x86, 64-bit), MSI Installer
     - [Visual C++ Redistributable für Visual Studio 2015](https://www.microsoft.com/de-at/download/details.aspx?id=48145)
-    - Forward Engineering konfigurieren: Model -> Model Options -> Target MySQL: 5.7
+    - Forward Engineering konfigurieren: Model --> Model Options --> Target MySQL: 5.7
 
 ## Coding
 
