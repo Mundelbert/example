@@ -33,6 +33,10 @@ $user     = 'root';
 $password = '';
 ```
 
+Console logging
+```
+echo "<script>console.log('" . json_encode($result) . "');</script>";
+```
 
 
 ## Helpful Links
