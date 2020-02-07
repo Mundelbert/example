@@ -29,14 +29,15 @@
       <div class="content-container">
         <h3>Suchergebnis</h3>
         <?php
-          if (isset($_GET["input"]) && $_GET["input"] != "") {
+          if (isset($_GET["input"])) {
             $connection = new PDO("mysql:host=localhost;dbname=filmauswahl", "root", "");
             $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             $param = "%" . $_GET["input"] . "%";
 
             $statement = $connection->prepare(
-              "SELECT Name FROM produktionsfirma
+              "SELECT Name 
+              FROM produktionsfirma
               WHERE Name LIKE :input;"
             );
             $statement->bindParam(':input', $param);
