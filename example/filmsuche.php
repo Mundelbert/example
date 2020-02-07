@@ -68,7 +68,7 @@
                 LEFT JOIN produktionsfirma
                 ON film.Produktionsfirma_Id = produktionsfirma.Id
                 WHERE produktionsfirma.Name LIKE :input
-                ORDER BY film.Erscheinungsdatum asc;"
+                ORDER BY film.Erscheinungsdatum;"
               );
               $statement->bindParam(':input', $param);
               $statement->execute();
