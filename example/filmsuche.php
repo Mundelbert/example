@@ -30,10 +30,12 @@
         <h3>Suchergebnis</h3>
         <?php
           if (isset($_GET["input"])) {
+            // echo "<script>console.log('" . json_encode($result) . "');</script>";
             $connection = new PDO("mysql:host=localhost;dbname=filmauswahl", "root", "");
             $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $param = "%" . $_GET["input"] . "%";
+            // Trim um eventuelle Leerzeichen zu entfernen
+            $param = "%" . trim($_GET["input"]) . "%";
 
             $statement = $connection->prepare(
               "SELECT Name 
@@ -43,7 +45,6 @@
             $statement->bindParam(':input', $param);
             $statement->execute();
             $result = $statement->fetchAll();
-            // echo "<script>console.log('" . json_encode($result) . "');</script>";
             ?>
 
             <p>Gesuchte Produktionsfirma: <span><?php echo $_GET["input"] ?></span></p>
