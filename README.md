@@ -43,3 +43,4 @@ echo "<script>console.log('" . json_encode($result) . "');</script>";
 - [PHP](https://www.w3schools.com/php/default.asp)
 - [SQL](https://www.w3schools.com/sql/default.asp)
 - [Bootstrap](https://www.w3schools.com/bootstrap/default.asp)
+- [Bootstrap - Navs](https://getbootstrap.com/docs/4.0/components/navs/)
