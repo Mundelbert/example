@@ -35,8 +35,10 @@
             $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // Trim um eventuelle Leerzeichen zu entfernen
-            $param = "%" . trim($_GET["input"]) . "%";
+            $input = trim($_GET["input"]);
+            $param = "%" . $input . "%";
 
+            // Erstes Query um alle Produktionsfirmen zu fetchen
             $statement = $connection->prepare(
               "SELECT Name 
               FROM produktionsfirma
