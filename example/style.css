@@ -5,6 +5,13 @@ body {
 .custom-container {
   width: 60vw;
   margin: auto;
+}
+
+nav {
+  margin-bottom: 2rem;
+}
+
+.content-container {
   padding: 1rem;
   border: solid black 2px;
 }
