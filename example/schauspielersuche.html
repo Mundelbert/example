@@ -28,8 +28,19 @@
       <div class="content-container">
         <form action="schauspielersuche.php" method="GET">
           <h3>Schauspielersuche</h3>
-          <label for="input">Suche Film nach Schauspieler:</label>
-          <input type="text" name="input" id="input" /><br />
+          <h6>Suche Film nach Schauspieler</h6>
+          <table>
+            <tr>
+              <td><label for="firstname">Vorname:</label></td>
+              <td><input type="text" name="firstname" id="firstname" required /></td>
+            </tr>
+            <tr>
+              <td><label for="lastname">Nachname:</label></td>
+              <td><input type="text" name="lastname" id="lastname" required /></td>
+            </tr>
+          </table>
+
+          <br />
           <input type="submit" value="Suchen" />
           <input type="reset" value="Abbrechen" />
         </form>
