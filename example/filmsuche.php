@@ -15,6 +15,7 @@
   </head>
   <body>
     <div  class="custom-container">
+      <!-- Navigations-Tabs -->
       <nav>
         <ul class="nav nav-tabs">
           <li class="nav-item">
@@ -26,9 +27,11 @@
         </ul>
       </nav>
 
+      <!-- Oberfläche zum Ergebnis der Suche -->
       <div class="content-container">
         <h3>Suchergebnis</h3>
         <?php
+          // Überprüfen, ob beim GET-Request der Parameter "input" mitgeschickt wird
           if (isset($_GET["input"])) {
             // echo "<script>console.log('" . json_encode($result) . "');</script>";
             $connection = new PDO("mysql:host=localhost;dbname=filmauswahl", "root", "");
@@ -52,9 +55,11 @@
             <p>Gesuchte Produktionsfirma: <span><?php echo $_GET["input"] ?></span></p>
           
             <?php
+            // Wenn keine Produktionsfirma gefunden wurde - Entsprechende Meldung ausgeben
             if (sizeof($result) == 0) {
               echo "<p>Produktionsfirma nicht gefunden</p>";
             } else {
+              // Ale gefundenen Elemente ausgeben
               echo "<p>Gefundene Produktionsfirma/Produktionsfirmen: ";
               $resultString = "";
               foreach ($result as $row) {
@@ -62,6 +67,7 @@
               }
               echo "<span>" . substr($resultString, 0, -2) . "</span></p>";
 
+              // Zweites Query um alle Filme der Produktionsfirem zu fetchen
               $statement = $connection->prepare(
                 "SELECT film.Name AS Titel, film.Erscheinungsdatum AS Erscheinungsdatum, produktionsfirma.Name AS Produktionsfirma
                 FROM film
@@ -74,8 +80,10 @@
               $statement->execute();
               $result = $statement->fetchAll();
 
+              // ANzahl der gefundenen Filme ausgeben
               echo "<p>Gefundene Filmtitel: <span>" . sizeof($result) . "</span></p>";
 
+              // Wenn FIlme gefunden wurden - Diese ausgeben
               if (sizeof($result) > 0) {
                 ?>
                 <table class="table">
@@ -88,6 +96,7 @@
                   </thead>
                   <tbody>
                     <?php 
+                      // Für jede gefundene Reihe eine neue Zeile mit Titel, Datum und Produktionsfirma ausgeben
                       foreach ($result as $row) {
                         echo "<tr>";
                           echo "<td>" . $row["Titel"] . "</td>";
@@ -102,6 +111,7 @@
                 }
               }
           } else {
+            // Wenn keine Filme gefunden wurden - Entsprechende Meldung ausgeben
             echo "<p>Es wurde keine Produktionsfirma mitgegeben</p>";
           }
         ?>
