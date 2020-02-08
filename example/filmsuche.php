@@ -80,7 +80,7 @@
               $statement->execute();
               $result = $statement->fetchAll();
 
-              // ANzahl der gefundenen Filme ausgeben
+              // Anzahl der gefundenen Filme ausgeben
               echo "<p>Gefundene Filmtitel: <span>" . sizeof($result) . "</span></p>";
 
               // Wenn FIlme gefunden wurden - Diese ausgeben

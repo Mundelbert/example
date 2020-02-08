@@ -25,9 +25,11 @@
         </ul>
       </nav>
 
+      <!-- Oberfläche zum Ergebnis der Suche -->
       <div class="content-container">
         <h3>Suchergebnis</h3>
         <?php
+          // Überprüfen, ob beim GET-Request der Parameter "input" mitgeschickt wird
           if (isset($_GET["firstname"]) && isset($_GET["lastname"])) {
             // echo "<script>console.log('" . json_encode($result) . "');</script>";
             $connection = new PDO("mysql:host=localhost;dbname=filmauswahl", "root", "");
@@ -37,6 +39,7 @@
             $firstName = trim($_GET["firstname"]);
             $lastName = trim($_GET["lastname"]);
 
+            // Erstes Query um alle Schauspieler zu fetchen
             $statement = $connection->prepare(
               "SELECT Vorname, Nachname
               FROM schauspieler
@@ -53,9 +56,11 @@
             <p>Gesuchter Schauspieler: <span><?php echo $_GET["firstname"] . " " . $_GET["lastname"] ?></span></p>
             
             <?php
+            // Wenn keine Schauspieler gefunden wurden - Entsprechende Meldung ausgeben
             if (sizeof($result) == 0) {
               echo "<p>Schauspieler nicht gefunden</p>";
             } else {
+              // Ale gefundenen Elemente ausgeben
               echo "<p>Gefundene Schauspieler: ";
               $resultString = "";
               foreach ($result as $row) {
@@ -63,6 +68,7 @@
               }
               echo "<span>" . substr($resultString, 0, -2) . "</span></p>";
 
+              // Zweites Query um alle Filme der Schauspieler zu fetchen
               $statement = $connection->prepare(
                 "SELECT film.Name AS Film, produktionsfirma.Name AS Produktionsfirma
                 FROM schauspieler
@@ -79,8 +85,10 @@
               $statement->execute();
               $result = $statement->fetchAll();
               
+              // Anzahl der gefundenen Filme ausgeben
               echo "<p>Gefundene Filme: <span>" . sizeof($result) . "</span></p>";
 
+              // Wenn FIlme gefunden wurden - Diese ausgeben
               if (sizeof($result) > 0) {
                 ?>
                 <table class="table">
@@ -92,6 +100,7 @@
                   </thead>
                   <tbody>
                     <?php 
+                      // Für jede gefundene Reihe eine neue Zeile mit Titel und Produktionsfirma ausgeben
                       foreach ($result as $row) {
                         echo "<tr>";
                           echo "<td>" . $row["Film"] . "</td>";
@@ -105,6 +114,7 @@
               }
             }            
           } else {
+            // Wenn keine Filme gefunden wurden - Entsprechende Meldung ausgeben
             echo "<p>Es wurde kein Schauspieler mitgegeben</p>";
           }
         ?>
