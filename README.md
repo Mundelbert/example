@@ -17,8 +17,6 @@
   - [Visual C++ Redistributable für Visual Studio 2015](https://www.microsoft.com/de-at/download/details.aspx?id=48145)
   - Forward Engineering konfigurieren: Model --> Model Options --> Target MySQL: 5.7
 
----
-
 ## SQL
 
 Checklist
@@ -26,8 +24,6 @@ Checklist
 - Target MySQL: 5.7 einstellen
 - Modell speichern
 - Dokumentation starten
-
----
 
 ## Coding
 
@@ -51,8 +47,6 @@ Console logging
 ```
 echo "<script>console.log('" . json_encode($result) . "');</script>";
 ```
-
----
 
 ## Helpful Links
 
