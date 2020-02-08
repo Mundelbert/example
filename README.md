@@ -25,6 +25,7 @@ Checklist
 
 - Target MySQL: 5.7 einstellen
 - Modell speichern
+- Dokumentation starten
 
 ---
 
