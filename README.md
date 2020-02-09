@@ -17,6 +17,10 @@
   - [Visual C++ Redistributable für Visual Studio 2015](https://www.microsoft.com/de-at/download/details.aspx?id=48145)
   - Forward Engineering konfigurieren: Model --> Model Options --> Target MySQL: 5.7
 
+### Allgemein
+- Chrome als Standardbrowser festlegen
+- Virtuelle Desktops konfigurieren
+
 ## SQL
 
 Checklist
