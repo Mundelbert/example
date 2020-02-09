@@ -25,8 +25,9 @@
 
 Checklist
 
-- Target MySQL: 5.7 einstellen
 - Modell speichern
+- Target MySQL: 5.7 einstellen
+- VARCHAR(255): Edit --> Preferences --> Modeling --> Defaults --> Column Type
 - Dokumentation starten
 
 ## Coding
