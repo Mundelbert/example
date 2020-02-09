@@ -18,6 +18,7 @@
   - Forward Engineering konfigurieren: Model --> Model Options --> Target MySQL: 5.7
 
 ### Allgemein
+
 - Chrome als Standardbrowser festlegen
 - Virtuelle Desktops konfigurieren
 
@@ -29,6 +30,11 @@ Checklist
 - Target MySQL: 5.7 einstellen
 - VARCHAR(255): Edit --> Preferences --> Modeling --> Defaults --> Column Type
 - Dokumentation starten
+
+### Export
+
+- Administration -> Data Export
+  - Edit -> Preferences -> Administrator -> Path to MySQLDumpTool -> C:\xampp\mysql\bin\mysqldump.exe
 
 ## Coding
 
