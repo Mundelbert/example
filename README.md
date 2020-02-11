@@ -53,6 +53,22 @@ $user     = 'root';
 $password = '';
 ```
 
+DB-Zugriff
+```
+$connection = new PDO("mysql:host=localhost;dbname=filmauswahl", "root", "");
+$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$statement = $connection->prepare(
+  "SELECT Name 
+  FROM produktionsfirma
+  WHERE Name LIKE :input;"
+);
+$statement->bindParam(':input', $param);
+$statement->execute();
+$result = $statement->fetchAll();
+
+```
+
 Console logging
 
 ```
