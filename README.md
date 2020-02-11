@@ -16,6 +16,7 @@
   - [Version 8.0.18](https://downloads.mysql.com/archives/workbench/) - Windows (x86, 64-bit), MSI Installer
   - [Visual C++ Redistributable für Visual Studio 2015](https://www.microsoft.com/de-at/download/details.aspx?id=48145)
   - Forward Engineering konfigurieren: Model --> Model Options --> Target MySQL: 5.7
+  - Varchar auf 255 setzen
 
 ### Allgemein
 
@@ -51,6 +52,22 @@ $server   = 'localhost';
 $database = '${name}';
 $user     = 'root';
 $password = '';
+```
+
+DB-Zugriff
+```
+$connection = new PDO("mysql:host=localhost;dbname=filmauswahl", "root", "");
+$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$statement = $connection->prepare(
+  "SELECT Name 
+  FROM produktionsfirma
+  WHERE Name LIKE :input;"
+);
+$statement->bindParam(':input', $param);
+$statement->execute();
+$result = $statement->fetchAll();
+
 ```
 
 Console logging
